@@ -1,0 +1,31 @@
+
+
+
+number_apples = int(input("Number of Apples in each row:- "))
+position_rotten = int(input("Position of rotten apple in row:-"))
+number_rows = int(input("enter number of rows:- "))
+
+print(f"There are {number_apples} apples, and the rotten apple is in position {position_rotten} and there are {number_rows} number of rows")
+
+mid_position = number_apples//2
+
+if position_rotten <= mid_position:
+    number_days = (number_apples-position_rotten)+(number_rows-1)
+
+else:
+    number_days = (position_rotten-1) +(number_rows-1)
+
+for r in range (number_rows):
+    print('')
+    for x in range (number_apples):
+        if x == (position_rotten):
+            print("x",end="")
+        else:
+            print("o",end="")
+
+
+
+
+print("")
+print('')
+print (f"it will take {number_days} days for all the apples to rot!!n",end="\n")
